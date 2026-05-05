@@ -118,10 +118,10 @@ export default function WorkSection() {
                 <p style={{ fontSize: "14px", lineHeight: 1.8, color: "var(--text-muted)" }}>{featured.description}</p>
                 <div style={{ display: "flex", gap: "20px", marginTop: "8px" }}>
                   <span style={{ fontSize: "12px", fontWeight: 700, color: "var(--accent)", letterSpacing: "0.05em", textTransform: "uppercase" }}>View Project →</span>
-                  <a href={featured.live} target="_blank" rel="noopener noreferrer" onClick={e => e.stopPropagation()}
-                    style={{ fontSize: "12px", fontWeight: 500, color: "var(--text-muted)", textTransform: "uppercase", letterSpacing: "0.05em", textDecoration: "none" }}>
+                  <span onClick={e => { e.preventDefault(); e.stopPropagation(); window.open(featured.live, "_blank", "noopener,noreferrer"); }}
+                    style={{ cursor: "pointer", fontSize: "12px", fontWeight: 500, color: "var(--text-muted)", textTransform: "uppercase", letterSpacing: "0.05em", textDecoration: "none" }}>
                     Live Demo ↗
-                  </a>
+                  </span>
                 </div>
               </div>
               {/* Right — visual */}
@@ -167,10 +167,10 @@ export default function WorkSection() {
                   <p style={{ fontSize: "13px", lineHeight: 1.75, color: "var(--text-muted)", flex: 1 }}>{p.description}</p>
                   <div style={{ display: "flex", gap: "16px", paddingTop: "10px", borderTop: "0.5px solid rgba(0,0,0,0.07)" }}>
                     <span style={{ fontSize: "11px", fontWeight: 700, color: "var(--accent)", textTransform: "uppercase", letterSpacing: "0.07em" }}>Details →</span>
-                    <a href={p.live} target="_blank" rel="noopener noreferrer" onClick={e => e.stopPropagation()}
-                      style={{ fontSize: "11px", fontWeight: 500, color: "var(--text-muted)", textTransform: "uppercase", letterSpacing: "0.07em", textDecoration: "none" }}>
+                    <span onClick={e => { e.preventDefault(); e.stopPropagation(); window.open(p.live, "_blank", "noopener,noreferrer"); }}
+                      style={{ cursor: "pointer", fontSize: "11px", fontWeight: 500, color: "var(--text-muted)", textTransform: "uppercase", letterSpacing: "0.07em", textDecoration: "none" }}>
                       Live ↗
-                    </a>
+                    </span>
                   </div>
                 </div>
               </Link>
