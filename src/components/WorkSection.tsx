@@ -95,11 +95,12 @@ export default function WorkSection() {
                 borderRadius: "20px", overflow: "hidden",
                 border: "0.5px solid rgba(0,0,0,0.08)",
                 background: "#fff",
+                boxShadow: "0 0 40px rgba(0,0,0,0.08)",
                 transition: "box-shadow .25s, transform .25s",
                 cursor: "none",
               }}
-              onMouseEnter={e => { (e.currentTarget as HTMLDivElement).style.boxShadow = "0 20px 60px rgba(0,0,0,0.10)"; (e.currentTarget as HTMLDivElement).style.transform = "translateY(-4px)"; }}
-              onMouseLeave={e => { (e.currentTarget as HTMLDivElement).style.boxShadow = ""; (e.currentTarget as HTMLDivElement).style.transform = ""; }}
+              onMouseEnter={e => { (e.currentTarget as HTMLDivElement).style.boxShadow = "0 0 64px rgba(0,0,0,0.16)"; (e.currentTarget as HTMLDivElement).style.transform = "translateY(-4px)"; }}
+              onMouseLeave={e => { (e.currentTarget as HTMLDivElement).style.boxShadow = "0 0 40px rgba(0,0,0,0.08)"; (e.currentTarget as HTMLDivElement).style.transform = ""; }}
             >
               {/* Left */}
               <div style={{ padding: "52px 48px", display: "flex", flexDirection: "column", gap: "18px" }}>
@@ -149,10 +150,11 @@ export default function WorkSection() {
                     background: "#fff", borderRadius: "16px", padding: "36px 28px",
                     border: "0.5px solid rgba(0,0,0,0.08)", display: "flex",
                     flexDirection: "column", gap: "14px", cursor: "none",
+                    boxShadow: "0 0 32px rgba(0,0,0,0.06)",
                     transition: "box-shadow .25s, transform .25s",
                   }}
-                  onMouseEnter={e => { (e.currentTarget as HTMLDivElement).style.boxShadow = "0 12px 40px rgba(0,0,0,0.09)"; (e.currentTarget as HTMLDivElement).style.transform = "translateY(-4px)"; }}
-                  onMouseLeave={e => { (e.currentTarget as HTMLDivElement).style.boxShadow = ""; (e.currentTarget as HTMLDivElement).style.transform = ""; }}
+                  onMouseEnter={e => { (e.currentTarget as HTMLDivElement).style.boxShadow = "0 0 48px rgba(0,0,0,0.14)"; (e.currentTarget as HTMLDivElement).style.transform = "translateY(-4px)"; }}
+                  onMouseLeave={e => { (e.currentTarget as HTMLDivElement).style.boxShadow = "0 0 32px rgba(0,0,0,0.06)"; (e.currentTarget as HTMLDivElement).style.transform = ""; }}
                 >
                   <div style={{ display: "flex", justifyContent: "space-between" }}>
                     <span className="font-display" style={{ fontSize: "2.2rem", fontWeight: 900, color: "var(--accent)", opacity: 0.12, lineHeight: 1 }}>{p.num}</span>
