@@ -139,7 +139,7 @@ export default function WorkPage() {
             <motion.div key={p.id}
               initial={{ opacity: 0, y: 32 }} animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.7, delay: 0.3 + i * 0.1, ease }}>
-              <Link href={`/work/${p.id}`} style={{ textDecoration: "none" }} data-cursor-hover>
+              <Link href={p.id === 'ai-resume-enhancer' ? p.live : `/work/${p.id}`} target={p.id === 'ai-resume-enhancer' ? "_blank" : "_self"} style={{ textDecoration: "none" }} data-cursor-hover>
                 <div style={{
                   background: "#fff", borderRadius: "12px", padding: "36px 32px",
                   border: "1px solid var(--border)", display: "flex", flexDirection: "column",

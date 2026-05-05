@@ -143,7 +143,7 @@ export default function WorkSection() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: i * 0.09, ease }}>
-              <Link href={`/work/${p.id}`} style={{ textDecoration: "none" }} data-cursor-hover>
+              <Link href={p.id === 'ai-resume-enhancer' ? p.live : `/work/${p.id}`} target={p.id === 'ai-resume-enhancer' ? "_blank" : "_self"} style={{ textDecoration: "none" }} data-cursor-hover>
                 <div
                   style={{
                     background: "#fff", borderRadius: "16px", padding: "36px 28px",
